@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IMDb Clone</title>
+</head>
+
+<body>
+    <!-- Nav Bar  -->
+    <nav class="flex ai-jc-sb">
+        <div class="logo-navbar">
+            <figure>
+                <img src="./assets/images/imdb-logo.svg" alt="imdb-logo">
+            </figure>
+        </div>
+        <!-- Search section -->
+        <div class="search-navbar">
+            <div class="search-section">
+                <input type="text" placeholder="Search Movies" tabindex="0" />
+                <div class="autocom-box" tabindex="1">
+                    <ul></ul>
+                </div>
+            </div>
+            <!--Navigate to favorites Section-->
+        </div>
+        <div class="fav-navbar">
+            <div class="favourites">
+                <p><a href="./favourite_page.html"><strong>Favourites</strong></a></p>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation section is over-->
+
+    <!-- Movie Carousel Section starts - Here we provide the most liked  list of movies which are loved by fans-->
+    <div class="mov-carousel">
+        <div class="container">
+            <div class="carousel-box">
+
+                <div class="slides">
+                    <a href="./movies.html?id=tt9531772" onclick="movieClicked({imdbID:'tt9531772'})">
+                        <figure>
+                            <img src="./assets/images/Movie_image/sooryavanshi.jpg" alt="sooryavanshi">
+                        </figure>
+                    </a>
+                </div>
+                <div class="slides">
+                    <a href="./movies.html?id=tt7529298" onclick="movieClicked({imdbID:'tt7529298'})">
+                        <figure>
+                            <img src="./assets/images/Movie_image/attack.jpg" alt="Attack">
+                        </figure>
+                    </a>
+                </div>
+                <div class="slides">
+                    <a href="./movies.html?id=tt11460992" onclick="movieClicked({imdbID:'tt11460992'})">
+                        <figure>
+                            <img src="./assets/images/Movie_image/runway34.jpg" alt="Runway 34">
+                        </figure>
+                    </a>
+                </div>
+                <div class="slides">
+                    <a href="./movies.html?id=tt9179430" onclick="movieClicked({imdbID:'tt9179430'})">
+                        <figure>
+                            <img src="./assets/images/Movie_image/vikram.jpg" alt="Vikram">
+                        </figure>
+                    </a>
+                </div>
+                <!-- Next and Prev Buttons -->
+                <a class="prev noselect" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next noselect" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- Movie Carousel List Ends here -->
+    <!-- Trending List of Movies-->
+    <section class="fan-favourites" id="fan-favs">
+        <div class="container">
+            <h2>Trending</h2>
+            <div class="movies-container flex">
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt1843866" onclick="movieClicked({imdbID:'tt1843866'})">
+                        <img src="./assets/images/Movie_image/Captain_America.jpg" alt="Captain America">
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt1300854" onclick="movieClicked({imdbID:'tt1300854'})">
+                        <img src="./assets/images/Movie_image/iron_man_3.jpg" alt="iron_man_3">
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt10872600" onclick="movieClicked({imdbID:'tt10872600'})">
+                        <img src="./assets/images/Movie_image/spider_man_no_way_home.jpg" alt="spider_man_no_way_home">
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt9179430" onclick="movieClicked({imdbID:'tt9179430'})">
+                        <img src="./assets/images/Movie_image/vikram.jpg" alt="Vikram">
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt6455162" onclick="movieClicked({imdbID:'tt6455162'})">
+                        <img src="./assets/images/Movie_image/Bhool_bhulaiyaa2.jpg" alt="Bhool_bhulaiyaa2">
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt11301946" onclick="movieClicked({imdbID:'tt11301946'})">
+                        <img src="./assets/images/Movie_image/Beast.jpg" alt="Beast">
+                    </a>
+                </div>
+            </div>
+            <a class="prev noselect">&#10094;</a>
+            <a class="next noselect">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- Trending Movie list end here -->
+
+    <!--In Theatres movies list-->
+    <section class="fan-favourites" id="theater">
+        <div class="container">
+            <h2>In Theaters</h2>
+            <div class="movies-container flex">
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt9179430" onclick="movieClicked({imdbID:'tt9179430'})">
+                        <img src="./assets/images/Movie_image/vikram.jpg" alt="Vikram" />
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt11873440" onclick="movieClicked({imdbID:'tt11873440'})">
+                        <img src="./assets/images/Movie_image/Heropanti2.jpg" alt="Heropanti2">
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt8178634" onclick="movieClicked({imdbID:'tt8178634'})">
+                        <img src="./assets/images/Movie_image/RRR.jpg" alt="RRR">
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt9419884" onclick="movieClicked({imdbID:'tt9419884'})">
+                        <img src="./assets/images/Movie_image/doctor_strange.jpg" alt=" Doctor Strange" />
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt10811166" onclick="movieClicked({imdbID:'tt10811166'})">
+                        <img src="./assets/images/Movie_image/Kashmir_files.jpg" alt="The Kashmir Files" />
+                    </a>
+                </div>
+                <div class="fav-box">
+                    <a href="./movies.html?id=tt3501632" onclick="movieClicked({imdbID:'tt3501632'})">
+                        <img src="./assets/images/Movie_image/Thor.jpg" alt="Thor">
+                    </a>
+                </div>
+
+
+            </div>
+            <a class="prev noselect">&#10094;</a>
+            <a class="next noselect">&#10095;</a>
+        </div>
+    </section>
+
+    <!--  In thatres movies end -->
+
+    <!-- ALERT BAR-->
+    <div id="alert"></div>
+    <!--SCRIPT FILE OF JAVA SCRIPT-->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
