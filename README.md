@@ -9,5 +9,9 @@ Features are :
 3. *We have used local storage to keep the favourite movie list.
 4. *On clicking on image of any movie you will get many information of it.
 
+CSS Folder contains all styling file.
+
+Javascipt code is present in js folder
+
 # Version : 1.0
 
