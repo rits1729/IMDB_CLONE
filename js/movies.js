@@ -27,7 +27,7 @@ if (res === null || res !== movieId) {
 async function getMoviePlots() {
   try {
 
-    const searches = await fetch(`http://www.omdbapi.com/?i=${res}&plot=full&apikey=f95293ff`);
+    const searches = await fetch(`https://www.omdbapi.com/?i=${res}&plot=full&apikey=f95293ff`);
     const data = await searches.json();
     if (data.Response === "True") {
       setMovieDetails(data);
